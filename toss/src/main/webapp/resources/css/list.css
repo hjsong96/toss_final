@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.btnList {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* 가운데 정렬 */
+	justify-content: center; /* 세로 가운데 정렬 */
+	height: 100vh; /* 뷰포트의 높이를 100%로 설정 */
+}
+
+.totalbtn {
+	display: block;
+	text-align: left;
+	padding-left: 30px;
+	margin: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 600px;
+	height: 90px;
+	background-color: white;
+	border: white;
+}
+
+.accbtn {
+	display: block;
+	text-align: left;
+	padding-left: 30px;
+	margin: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 600px;
+	height: 90px;
+	background-color: white;
+	border: white;
+}
+
+
+.total {
+	font-weight: bold;
+	text-align: left;
+	font-size: large;
+}
+
+.acc-container {
+	position: relative;
+}
+
+.tossopen {
+	text-align: left;
+	font-weight: bold;
+	font-size: x-large;
+}
+
+.accbtn:hover {
+	background-color: #F4F4F4;
+	cursor: pointer;
+}
+
+.balance {
+	text-align: left;
+	font-size: x-large;
+}
+
+.edge {
+	margin: 0 auto;
+	width: 600px;
+	height: 855px;
+	padding: 30px 40px;
+	border-style: solid;
+	border-color: #0D47A1;
+	border-radius: 15px;
+	overflow: auto;
+}
+
+.sendBtn {
+	background-color: rgba(238, 238, 238, 1);
+	border: 0;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 16px;
+	transition: background-color 0.5s ease-out;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+.sendBtn:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}

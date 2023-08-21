@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="main">
+    
+    	<select id="accountInfo" parameterType="String" resultType="Map">
+    		SELECT * FROM accounts WHERE aaccount=#{aaccount}
+    	</select>
+    	
+    
+    	<select id="transactionList" parameterType="String" resultType="Map">
+    		SELECT * FROM transactions WHERE aaccount=#{aaccount} ORDER BY tno DESC
+    	</select>
+    	
+    	<select id="withdrawalList" parameterType="String" resultType="Map">
+    		SELECT * FROM transactions WHERE (aaccount=#{aaccount} AND ttoggle=0) ORDER BY tno DESC
+    	</select>
+    	
+    	<select id="dipositList" parameterType="String" resultType="Map">
+    		SELECT * FROM transactions WHERE (aaccount=#{aaccount} AND ttoggle=1) ORDER BY tno DESC
+    	</select>
+    
+    </mapper>

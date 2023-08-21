@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="charge">
+	<select id="select" parameterType="AccountsDTO" resultType="AccountsDTO">
+		SELECT * FROM accounts WHERE aaccount = #{aaccount }
+	</select>
+	
+	<select id="select2" parameterType="String" resultType="AccountsDTO">
+		SELECT * FROM accounts WHERE aaccount= #{aaccount }
+	</select>
+		
+	<select id="chargeCheck2" parameterType="Map" resultType="Integer">
+		SELECT COUNT(*) FROM accounts WHERE aaccount= #{aaccount} AND abank = #{abank }
+	</select>	
+	
+	<select id="abCheck" parameterType="Map" resultType="AccountsDTO">
+		SELECT * FROM accounts WHERE aaccount= #{trAccount0} AND abank = #{trAbank0 }
+	</select>
+	
+	<select id="sendList2" parameterType="String" resultType="AccountsDTO">
+		SELECT * FROM accounts WHERE aaccount=#{aaccount }
+	</select>	
+	
+	<insert id="trSave0" parameterType="Map">
+		INSERT INTO transactions (aaccount, tbank, tholder, thistory, ttoggle, tamount, tbalance)
+		VALUES(#{trAccount0 }, #{trAbank0 }, #{trholder0 }, #{tHistory1 }, #{ttoggle0 }, #{tamount }, #{trbalance0 } )
+	</insert>
+	
+	<insert id="trSave1" parameterType="Map">
+		INSERT INTO transactions (aaccount, tbank, tholder, thistory, ttoggle, tamount, tbalance)
+		VALUES(#{aaccount }, #{trAbank1 }, #{trholder1 }, #{tHistory0 }, #{ttoggle1 }, #{tamount }, #{trbalance1 } )
+	</insert>
+	
+	<update id="acChange0" parameterType="Map">
+		UPDATE accounts SET abalance = #{trbalance0 } WHERE aaccount =#{trAccount0 } AND abank=#{trAbank0 }			
+	</update>
+	
+	<update id="acChange1" parameterType="Map">
+		UPDATE accounts SET abalance = #{trbalance1 } WHERE aaccount =#{aaccount } AND abank=#{trAbank1 }	
+	</update>
+</mapper>

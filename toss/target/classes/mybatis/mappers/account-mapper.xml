@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="account">  
+  
+  
+<select id="MnameMphone" resultType="Map" parameterType="String">
+    SELECT mname, mphone FROM members WHERE mphone = #{mphone}
+</select>
+
+<select id="otherBank" resultMap="bankResultMap" parameterType="String">
+    SELECT abank, aaccount, abalance FROM accounts WHERE abank != '토스뱅크' AND mphone = #{mphone}
+</select>
+
+
+<select id="tossBank" resultMap="bankResultMap" parameterType="String">
+    SELECT abank, aaccount, abalance FROM accounts WHERE abank = '토스뱅크' AND mphone = #{mphone}
+</select>
+
+<resultMap id="bankResultMap" type="java.util.HashMap">
+    <result column="abank" property="abank"/>
+    <result column="aaccount" property="aaccount"/>
+    <result column="abalance" property="abalance"/>
+</resultMap>
+
+   <insert id="tossInsert" parameterType="Map">
+    INSERT INTO accounts (mphone, abank, aaccount, aholder)
+    VALUES(#{mphone},#{abank},#{aaccount},#{aholder})
+    </insert>
+
+
+</mapper>

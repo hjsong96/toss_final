@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+.nav_container {
+	position: relative;
+	display: flex;
+	width: 100%;
+	min-width: 60em;
+	padding: 0 1.25em;
+	margin: 1.25em auto;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-text-size-adjust: none;
+	box-sizing: border-box;
+}
+
+.content_signin {
+	min-height: 41.667em;
+	text-align: center;
+	margin: 5em auto;
+	border: 2px solid #516B82;
+}
+
+.content_signin .signin_section_group {
+	position: relative;
+	width: 28.333em;
+	height: 41.667em;
+	overflow: hidden;
+}
+
+.content_signin .signin-section {
+	border-top: 1;
+	border-radius: 0 0 2px 2px;
+}
+
+content_signin .signin_swiper {
+	position: absolute;
+	display: flex;
+	width: 56.667em;
+	transform: translate3d(0, 0, 0);
+	transition-duration: 300ms;
+}
+
+.content_signin .signin_section {
+	width: 28em;
+	margin: 0 0.167em;
+}
+
+.content_signin .signin-section .register_input, .content_signin .signin-section .register_phone
+	{
+	width: 100%;
+	font-size: 1em;
+	padding: 0.75em 1.625em;
+	border-radius: 2px 2px 0 0;
+}
+
+input[type="text"], input[type="password"]{
+	border-radius: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	outline: none;
+	-webkit-appearance: none;
+	vertical-align: middle;
+}
+
+button, input{
+	font: inherit;
+	color: inherit;
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+	background-color: inherit;
+}
+
+.content_signin .signin_title {
+	display: inline-block;
+	font-size: 2.167em;
+	font-weight: 300;
+	padding: 0.192em 0;
+	margin: 0.769em 0;
+	border-bottom: 1px solid #333;
+}
+
+.content_signin .signin_group {
+	min-height: 41.667em;
+	text-align: center;
+	margin: 5em auto;
+}
+
+.content_signin_group {
+	position: relative;
+	width: 28.333em;
+	height: 41.667em;
+	overflow: hidden;
+}
+
+.content_signin .signin-section #register_login {
+	width: 100%;
+	height: 2.2em;
+	font-size: 1.4em;
+	font-weight: 300;
+	margin: 0.6em -1em;
+	color: white;
+	background : #0064FF;
+	border-radius: 10px;
+}
+
+button {
+	border: none;
+	outline: none;
+	overflow: visible;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	background-color: transparent;
+}
+
+html, body {
+	font-family: "Roboto", "Noto Sans KR", 나눔고딕, "Nanum Gothic",
+		"Malgun Gothic", 맑은고딕, 굴림, 돋움, "Dotum", "sans-serif";
+	font-weight: 400;
+	font-size: 15px;
+	color: #111;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+}
+
+.content_signin .button_join {
+	display: block;
+	width: 11em;
+	font-size: 1.167em;
+	margin: 7.143em auto;
+	padding: 0.929em 1.429em;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+.content_signin .signin-section {
+	padding: 3.25em 5em;
+}
+
+input::placeholder {
+	font-size: 0.8em;
+	font-family: "Roboto", "Noto Sans KR", 나눔고딕, "Nanum Gothic",
+		"Malgun Gothic", 맑은고딕, 굴림, 돋움, "Dotum", "sans-serif";
+}
+
+img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.inline{
+	margin : 3px;
+	display: flex;
+}
+
+.register_phone{
+	width: 100%;
+	font-size: 1em;
+	padding: 0.75em 1.625em 0 0;
+	border-radius: 2px 2px 2 0;
+	}
+	
+.mphoneCheck{
+	color: white;
+	background : #0064FF;
+}
