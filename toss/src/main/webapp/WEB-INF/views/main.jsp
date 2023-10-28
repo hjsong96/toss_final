@@ -85,7 +85,7 @@
 			}, 2000);
 		}
 	}
-	
+	  
 	document.getElementById("openPopup").addEventListener("click", function() {
 		document.getElementById("overlay").style.display = "block";
 		document.getElementById("popup").style.display = "block";
